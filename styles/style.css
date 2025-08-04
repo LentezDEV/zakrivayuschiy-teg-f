@@ -11,6 +11,9 @@
 */
 
 .page {
+  font-family: var(--font-primary),system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
   min-inline-size: 320px;
   min-block-size: 100dvb;
+  font-variation-settings: 'wght' var(--fw-card-text);
 }
+
