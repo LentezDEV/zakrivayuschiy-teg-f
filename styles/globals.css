@@ -51,3 +51,11 @@ ol {
   clip-path: inset(50%);
   white-space: nowrap;
 }
+
+button {
+  padding: 0;
+  border: none;
+  background: none;
+  outline: none; /* Убирает подсветку при фокусе */
+  cursor: pointer; /* Сохраняет курсор в виде указателя */
+}

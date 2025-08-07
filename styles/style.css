@@ -15,5 +15,213 @@
   min-inline-size: 320px;
   min-block-size: 100dvb;
   font-variation-settings: 'wght' var(--fw-card-text);
+  background-image: var(--bg-grid);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
+}
+
+.header{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  max-block-size: 327px;
+  margin-block: 100px;
+  background-color: white;
+  border: 2px solid black;
+  inline-size: var(--width-main);
+
+}
+
+.header__logo{
+  font-family: var(--font-accent);
+  font-size: 49px;
+}
+.header__tagline{
+  font-family: var(--font-accent);
+  font-size: var(--fs-button-lable);
+  margin-block-start: 20px;
+  text-transform: uppercase;
+}
+
+main{
+  display: grid;
+  grid-template-columns: 375px;
+  grid-template-rows: repeat(8,max-content);
+  justify-content: center;
+  align-content: start;
+  row-gap: calc(50px - 4px);
+}
+
+.post{
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: var(--border-default);
+}
+
+.post__title,
+.post__text {
+  font-size: var(--fs-card);
+  letter-spacing: 0.1px;
+}
+
+.post__title{
+  font-variation-settings: 'wght' var(--fw-card-title);
+  padding-inline: 10px;
+  padding-block: 4px;
+  align-self: flex-start;
+  line-height: 23px;
+
+}
+
+.title{
+  line-height: 22px;
+}
+
+.post__images{
+  position: relative;
+  border-block: var(--border-default);
+}
+
+.post__image{
+  display: block;
+  margin-block-end: -2px;
+  inline-size: 100%;
+}
+
+.post__image-caption{
+  position: absolute;
+  z-index: 100;
+  inset-inline-start: 248px;
+  inset-block-end: 335px;
+  font-size: var(--fs-button-lable);
+  font-family: var(--font-accent);
+  opacity: 0.5;
+  mix-blend-mode: hard-light;
+   text-shadow: 
+    -1px  0   0 var(--label-stroke-color),
+     1px  0   0 var(--label-stroke-color),
+     0   -1px 0 var(--label-stroke-color),
+     0    1px 0 var(--label-stroke-color);
+}
+
+@supports (-webkit-text-stroke: 1px var(--label-stroke-color)) or
+          (    text-stroke: 1px var(--label-stroke-color)){
+  .post__image-caption{
+    text-shadow: none;
+    -webkit-text-stroke: 1px var(--label-stroke-color);
+            text-stroke: 1px var(--label-stroke-color);
+  }
+}
+
+.post__text{
+  padding-block-start: 25px;
+  padding-inline: 24px;
+  line-height: 20.98px;
+}
+
+.post__text-hero{
+  padding-block: 25px;
+}
+
+.like-button{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-self: flex-end;
+  padding-inline-end: 25px;
+  padding-block-end: 25px;
+  gap: 12px;
+}
+
+.card__like-button{
+  font-family: var(--font-accent);
+  font-size: var( --fs-button-lable);
+  padding-block: 12px;
+  padding-inline: 37px;
+  border: var(--border-default);
+  line-height: 90%;
+}
+
+.footer{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+
+}
+
+
+.footer__save-button{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  background-color: var(--label-stroke-color);
+  padding-inline: 20px;
+  padding-block: 17px;
+  border: var(--border-default);
+  margin-block-start: 50px;
+  margin-block-end: 100px;
+
+}
+
+.button__text{
+  
+  font-family: var(--font-accent);
+  font-size: var(--fs-button-lable); 
+  line-height: 90%;
+}
+
+.save-dialog {
+  /* Внешний вид окна */
+  padding-block-start: 30px;
+  padding-inline: 40px;
+  border: var(--border-default);
+  background-color: #ffffff;
+  max-inline-size: 355px;
+  color: #000;
+  font-family: var(--font-accent);
+
+}
+
+.save-dialog[open] {
+  display: grid;               
+  row-gap: 30px;
+}
+
+.save-dialog__row {
+  display: grid;                
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  column-gap: 20px;
+}
+
+
+.save-dialog__text {
+  font-size: var(--fs-button-lable);
+  line-height: 150%;
+  text-transform: uppercase;
+}
+
+.save-dialog__ok {
+  width: 100%;
+  padding-block: 12px;
+  border: var(--border-default);
+  background-color: transparent;
+}
+
+.save-dialog::backdrop {
+  background-color: rgb(0 0 0 / 0.75);   
+}
+
+@media (width <= 1440px){
+
 }
 
