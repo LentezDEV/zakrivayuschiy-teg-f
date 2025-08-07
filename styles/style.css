@@ -28,28 +28,29 @@
   align-items: center;
   justify-content: center;
   height: 100vh;
-  max-block-size: 327px;
+  block-size: 327px;  
   margin-block: 100px;
   background-color: white;
   border: 2px solid black;
   inline-size: var(--width-main);
+  margin-inline: auto;
 
 }
 
 .header__logo{
   font-family: var(--font-accent);
-  font-size: 49px;
+  font-size: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem); 
 }
 .header__tagline{
   font-family: var(--font-accent);
-  font-size: var(--fs-button-lable);
+  font-size: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
   margin-block-start: 20px;
   text-transform: uppercase;
 }
 
 main{
   display: grid;
-  grid-template-columns: 375px;
+  grid-template-columns: var(--width-main);;
   grid-template-rows: repeat(8,max-content);
   justify-content: center;
   align-content: start;
@@ -75,7 +76,7 @@ main{
   padding-inline: 10px;
   padding-block: 4px;
   align-self: flex-start;
-  line-height: 23px;
+  line-height: 23.8px;
 
 }
 
@@ -91,14 +92,16 @@ main{
 .post__image{
   display: block;
   margin-block-end: -2px;
-  inline-size: 100%;
+  width: clamp(375px, 100vw, 696px);
+  height: clamp(375px, 100vw, 696px);;
+ 
 }
 
 .post__image-caption{
   position: absolute;
   z-index: 100;
-  inset-inline-start: 248px;
-  inset-block-end: 335px;
+  inset-block-start:25px; 
+  inset-inline-start: 250px;
   font-size: var(--fs-button-lable);
   font-family: var(--font-accent);
   opacity: 0.5;
@@ -122,11 +125,12 @@ main{
 .post__text{
   padding-block-start: 25px;
   padding-inline: 24px;
-  line-height: 20.98px;
+  line-height: 20.90px;
 }
 
 .post__text-hero{
   padding-block: 25px;
+  align-self: flex-start;
 }
 
 .like-button{
@@ -180,7 +184,6 @@ main{
 }
 
 .save-dialog {
-  /* Внешний вид окна */
   padding-block-start: 30px;
   padding-inline: 40px;
   border: var(--border-default);
@@ -221,7 +224,18 @@ main{
   background-color: rgb(0 0 0 / 0.75);   
 }
 
-@media (width <= 1440px){
+@media (min-width: 1440px){
+
+  .header{
+    block-size: 368px; 
+  }
+
+  .post__image-caption{
+    inset-block-start:23px; 
+    inset-inline-start: 573px;
+  }
+
+  
 
 }
 
