@@ -100,8 +100,8 @@ main{
 .post__image-caption{
   position: absolute;
   z-index: 100;
-  inset-block-start:clamp(25px, 74vh, 23px);
-  inset-inline-start: clamp(250px, 74vw, 573px);
+  inset-block-start:clamp(25px, 60vh, 23px);
+  inset-inline-start: clamp(250px, 60vw, 573px);
   font-size: var(--fs-button-lable);
   font-family: var(--font-accent);
   opacity: 0.5;
@@ -111,6 +111,49 @@ main{
      1px  0   0 var(--label-stroke-color),
      0   -1px 0 var(--label-stroke-color),
      0    1px 0 var(--label-stroke-color);
+}
+
+.img-start {
+  filter:
+    sepia(0.25)     
+    contrast(1.1)    
+    brightness(1.08)
+}
+
+
+.img-clean {
+  filter: contrast(1.5) brightness(1.15);
+}
+
+
+.img-dance {
+  filter:
+    saturate(1.6)     
+    hue-rotate(-12deg)
+    contrast(1.2)
+}
+
+
+.img-disco {
+  filter:
+    hue-rotate(335deg)
+    saturate(2)
+    drop-shadow(0 0 7px #ff3cff);
+}
+
+.img-moose {
+  filter: hue-rotate(180deg);
+}
+
+.img-win {
+  filter:
+    grayscale(0.65)              
+    brightness(1.15)             
+    drop-shadow(0 0 4px #0003);
+}
+
+.img-copium {
+  filter: brightness(0.8) blur(1.2px);
 }
 
 @supports (-webkit-text-stroke: 1px var(--label-stroke-color)) or
