@@ -100,8 +100,8 @@ main{
 .post__image-caption{
   position: absolute;
   z-index: 100;
-  inset-block-start:25px; 
-  inset-inline-start: 250px;
+  inset-block-start:clamp(25px, 74vh, 23px);
+  inset-inline-start: clamp(250px, 74vw, 573px);
   font-size: var(--fs-button-lable);
   font-family: var(--font-accent);
   opacity: 0.5;
@@ -230,12 +230,21 @@ main{
     block-size: 368px; 
   }
 
-  .post__image-caption{
-    inset-block-start:23px; 
-    inset-inline-start: 573px;
+  .post__text{
+    line-height: 21.55px;
   }
 
+
+
+  .footer__save-button{
+    flex-direction: row;
   
+  }
+
+  .footer__icon{
+    width: 21px;
+    height: 21px;
+  }
 
 }
 
