@@ -1,10 +1,10 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
 
 :root {
-  /* Переменные-шрифты */
+
   --font-primary: "InterVariable", sans-serif;
   --font-accent: "PressStart2P", cursive;
-  /* Задаём два веса для вариативного Inter */
+
   --fw-card-text: 410;
   --fw-card-title: 715;
   --fs-card: 18px; 
@@ -12,22 +12,28 @@
   --fs-button-lable: 14px; 
 
   --bg-grid:
-    /* 1. повторяющиеся полосы слева-направо*/ 
-
     repeating-linear-gradient(
       to right,
       #d3d3d3 0 2px,
       transparent 2px 4px
     ),
-    /* 2. повторяющиеся полосы сверху-вниз*/
-
       repeating-linear-gradient(to bottom, #d3d3d3 0 2px, transparent 2px 4px),
-      
-    /* 3. плавный вертикальный переход от светлого к тёмному */
       linear-gradient(to bottom, #e7e7e7 0.01%, #1a1a1a 100%);
 
-  --width-main: clamp(375px, 100%, 700px);
+  --width-main: clamp(373px, 100vw, 700px);
   --height-main: clamp(327px,50vh,368px);
   --border-default: 2px solid black; 
   --label-stroke-color: white;
+
+  --accent-color: black;          
+  --btn-bg-color: #fff;          
+  --btn-fg-color: #fff;   
+
+
+  --contour-color: black;
+  --sparks-color:red;
+  
+  --color-heart-hover:   #000000;   
+  --color-heart-active:  #ff0000;   
+
 }
