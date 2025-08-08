@@ -11,58 +11,58 @@
 */
 
 .page {
-  font-family: var(--font-primary),system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  font-family: var(--font-primary), system-ui, -apple-system, BlinkMacSystemFont,
+    sans-serif;
+  background-image: var(--bg-grid);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
   min-inline-size: 320px;
   min-block-size: 100dvb;
-  font-variation-settings: 'wght' var(--fw-card-text);
-  background-image: var(--bg-grid);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-
+  font-variation-settings: "wght" var(--fw-card-text);
 }
 
-.header{
+.header {
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   height: 100vh;
-  block-size: 327px;  
-  margin-block: 100px;
-  background-color: white;
-  border: 2px solid black;
-  inline-size: var(--width-main);
   margin-inline: auto;
-
+  margin-block: 100px;
+  border: 2px solid black;
+  background-color: white;
+  block-size: 327px;
+  inline-size: var(--width-main);
 }
 
-.header__logo{
+.header__logo {
   font-family: var(--font-accent);
-  font-size: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem); 
+  font-size: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
 }
-.header__tagline{
+
+.header__tagline {
+  margin-block-start: 20px;
   font-family: var(--font-accent);
   font-size: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
-  margin-block-start: 20px;
   text-transform: uppercase;
 }
 
-main{
+main {
   display: grid;
   grid-template-columns: var(--width-main);
-  grid-template-rows: repeat(8,max-content);
+  grid-template-rows: repeat(8, max-content);
   justify-content: center;
   align-content: start;
   row-gap: 52px;
 }
 
-.post{
-  background-color: white;
+.post {
   display: flex;
   flex-direction: column;
   align-items: center;
   border: var(--border-default);
+  background-color: white;
 }
 
 .post__title,
@@ -71,74 +71,60 @@ main{
   letter-spacing: 0.1px;
 }
 
-.post__title{
-  font-variation-settings: 'wght' var(--fw-card-title);
+.post__title {
+  align-self: flex-start;
+  width: 100%;
   padding-inline: 10px;
   padding-block: 4px;
-  align-self: flex-start;
   line-height: 1.2;
-  width: 100%;
+  font-variation-settings: "wght" var(--fw-card-title);
 }
 
-.title{
+.title {
   line-height: 1.256;
 }
 
-.post__images{
+.post__images {
   position: relative;
 }
 
-.post__image{
+.post__image {
   display: block;
-  object-fit: cover;
+  box-sizing: border-box;
   width: clamp(373px, 100vw, 696px);
   height: clamp(373px, 100vw, 696px);
   border-block: var(--border-default);
-  box-sizing: border-box;
+  object-fit: cover;
 }
 
-.post__image-caption{
+.post__image-caption {
   position: absolute;
   z-index: 100;
-  inset-block-start:clamp(25px, 60vh, 23px);
-  inset-inline-start: clamp(250px, 60vw, 573px);
-  font-size: var(--fs-button-lable);
-  font-family: var(--font-accent);
   opacity: 0.5;
+  font-family: var(--font-accent);
+  font-size: var(--fs-button-lable);
+  text-shadow: -1px 0 0 var(--label-stroke-color),
+    1px 0 0 var(--label-stroke-color), 0 -1px 0 var(--label-stroke-color),
+    0 1px 0 var(--label-stroke-color);
+  inset-block-start: clamp(25px, 60vh, 23px);
+  inset-inline-start: clamp(250px, 60vw, 573px);
   mix-blend-mode: hard-light;
-   text-shadow: 
-    -1px  0   0 var(--label-stroke-color),
-     1px  0   0 var(--label-stroke-color),
-     0   -1px 0 var(--label-stroke-color),
-     0    1px 0 var(--label-stroke-color);
 }
 
 .img-start {
-  filter:
-    sepia(0.25)     
-    contrast(1.1)    
-    brightness(1.08)
+  filter: sepia(0.25) contrast(1.1) brightness(1.08);
 }
-
 
 .img-clean {
   filter: contrast(1.5) brightness(1.15);
 }
 
-
 .img-dance {
-  filter:
-    saturate(1.6)     
-    hue-rotate(-12deg)
-    contrast(1.2)
+  filter: saturate(1.6) hue-rotate(-12deg) contrast(1.2);
 }
 
-
 .img-disco {
-  filter:
-    hue-rotate(335deg)
-    saturate(2)
-    drop-shadow(0 0 7px #ff3cff);
+  filter: hue-rotate(335deg) saturate(2) drop-shadow(0 0 7px #ff3cff);
 }
 
 .img-moose {
@@ -146,61 +132,56 @@ main{
 }
 
 .img-win {
-  filter:
-    grayscale(0.65)              
-    brightness(1.15)             
-    drop-shadow(0 0 4px #0003);
+  filter: grayscale(0.65) brightness(1.15) drop-shadow(0 0 4px #0003);
 }
 
 .img-copium {
   filter: brightness(0.8) blur(1.2px);
 }
 
-@supports (-webkit-text-stroke: 1px var(--label-stroke-color)) or
-          (    text-stroke: 1px var(--label-stroke-color)){
-  .post__image-caption{
+@supports (-webkit-text-stroke: 1px var(--label-stroke-color)) or (text-stroke: 1px var(--label-stroke-color)) {
+  .post__image-caption {
     text-shadow: none;
     -webkit-text-stroke: 1px var(--label-stroke-color);
-            text-stroke: 1px var(--label-stroke-color);
+    text-stroke: 1px var(--label-stroke-color);
   }
 }
 
-.post__text{
-  padding-block-start: 25px;
+.post__text {
   padding-inline: 25px;
+  padding-block-start: 25px;
   line-height: 1.14;
 }
 
-.post__text-hero{
-  padding-block: 25px;
+.post__text-hero {
   align-self: flex-start;
+  padding-block: 25px;
   line-height: 1.112;
-
 }
 
-.like-button{
+.like-button {
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
+  gap: 2px;
   align-self: flex-end;
+  padding-inline-start: 169px;
   padding-inline-end: 25px;
   padding-block-end: 25px;
-  padding-inline-start: 169px;
-  gap: 2px;
 }
 
-.card__like-button{
-  font-family: var(--font-accent);
-  font-size: var( --fs-button-lable);
-  padding-block: 12px;
-  padding-inline: 37px;
+.card__like-button {
   border: var(--border-default);
+  padding-inline: 37px;
+  padding-block: 12px;
+  font-family: var(--font-accent);
+  font-size: var(--fs-button-lable);
   line-height: 90%;
 }
 
 .card__icon-button {
-  border: 2px solid transparent;          
-  transition: border-color 0.3s ease;     
+  border: 2px solid transparent;
+  transition: border-color 0.3s ease;
 }
 
 .card__icon-button:focus {
@@ -208,63 +189,57 @@ main{
 }
 
 .card__icon-button:focus-visible {
-  border-color: var(--accent-color);     
+  border-color: var(--accent-color);
 }
 
-.footer{
+.footer {
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   width: 100%;
-
 }
 
-
-.footer__save-button{
+.footer__save-button {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 8px;
-  background-color: var(--label-stroke-color);
-  padding-inline: 20px;
-  padding-block: 17px;
-  border: var(--border-default);
   margin-block-start: 50px;
   margin-block-end: 100px;
-
+  border: var(--border-default);
+  padding-inline: 20px;
+  padding-block: 17px;
+  background-color: var(--label-stroke-color);
 }
 
-.button__text{
-  
+.button__text {
   font-family: var(--font-accent);
-  font-size: var(--fs-button-lable); 
+  font-size: var(--fs-button-lable);
   line-height: 90%;
 }
 
 .save-dialog {
-  padding-block-start: 30px;
-  padding-inline: 40px;
   border: var(--border-default);
-  background-color: #ffffff;
-  max-inline-size: 355px;
+  padding-inline: 40px;
+  padding-block-start: 30px;
   color: #000;
   font-family: var(--font-accent);
-
+  background-color: #ffffff;
+  max-inline-size: 355px;
 }
 
 .save-dialog[open] {
-  display: grid;               
+  display: grid;
   row-gap: 30px;
 }
 
 .save-dialog__row {
-  display: grid;                
+  display: grid;
   grid-template-columns: auto 1fr;
   align-items: center;
   column-gap: 20px;
 }
-
 
 .save-dialog__text {
   font-size: var(--fs-button-lable);
@@ -274,36 +249,30 @@ main{
 
 .save-dialog__ok {
   width: 100%;
-  padding-block: 12px;
   border: var(--border-default);
+  padding-block: 12px;
   background-color: transparent;
 }
 
 .save-dialog::backdrop {
-  background-color: rgb(0 0 0 / 0.75);   
+  background-color: rgb(0 0 0 / 0.75);
 }
 
-
-@media (min-width: 1440px){
-
-  .header{
-    block-size: 368px; 
+@media (min-width: 1440px) {
+  .header {
+    block-size: 368px;
   }
 
-  .post__text{
+  .post__text {
     line-height: 20.6px;
   }
 
-
-  .footer__save-button{
+  .footer__save-button {
     flex-direction: row;
-  
   }
 
-  .footer__icon{
+  .footer__icon {
     width: 21px;
     height: 21px;
   }
-
 }
-

@@ -1,39 +1,35 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
 
 :root {
-
   --font-primary: "InterVariable", sans-serif;
   --font-accent: "PressStart2P", cursive;
 
   --fw-card-text: 410;
   --fw-card-title: 715;
-  --fs-card: 18px; 
+  --fs-card: 18px;
 
-  --fs-button-lable: 14px; 
+  --fs-button-lable: 14px;
 
-  --bg-grid:
-    repeating-linear-gradient(
+  --bg-grid: repeating-linear-gradient(
       to right,
       #d3d3d3 0 2px,
       transparent 2px 4px
     ),
-      repeating-linear-gradient(to bottom, #d3d3d3 0 2px, transparent 2px 4px),
-      linear-gradient(to bottom, #e7e7e7 0.01%, #1a1a1a 100%);
+    repeating-linear-gradient(to bottom, #d3d3d3 0 2px, transparent 2px 4px),
+    linear-gradient(to bottom, #e7e7e7 0.01%, #1a1a1a 100%);
 
   --width-main: clamp(373px, 100vw, 700px);
-  --height-main: clamp(327px,50vh,368px);
-  --border-default: 2px solid black; 
+  --height-main: clamp(327px, 50vh, 368px);
+  --border-default: 2px solid black;
   --label-stroke-color: white;
 
-  --accent-color: black;          
-  --btn-bg-color: #fff;          
-  --btn-fg-color: #fff;   
-
+  --accent-color: black;
+  --btn-bg-color: #fff;
+  --btn-fg-color: #fff;
 
   --contour-color: black;
-  --sparks-color:red;
-  
-  --color-heart-hover:   #000000;   
-  --color-heart-active:  #ff0000;   
+  --sparks-color: red;
 
+  --color-heart-hover: #000000;
+  --color-heart-active: #ff0000;
 }
