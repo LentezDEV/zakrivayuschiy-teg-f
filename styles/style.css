@@ -62,6 +62,7 @@ main{
   display: flex;
   flex-direction: column;
   align-items: center;
+  border: var(--border-default);
 }
 
 .post__title,
@@ -77,8 +78,6 @@ main{
   align-self: flex-start;
   line-height: 1.2;
   width: 100%;
-  border-top: var(--border-default);
-  border-inline: var(--border-default);
 }
 
 .title{
@@ -94,9 +93,8 @@ main{
   object-fit: cover;
   width: clamp(373px, 100vw, 696px);
   height: clamp(373px, 100vw, 696px);
-  border-top: 2px solid black; ;
-  border-bottom: 2px solid black; ;
-  border-inline: var(--border-default);
+  border-block: var(--border-default);
+  box-sizing: border-box;
 }
 
 .post__image-caption{
@@ -171,14 +169,12 @@ main{
   padding-block-start: 25px;
   padding-inline: 25px;
   line-height: 1.14;
-  border-inline: var(--border-default);
 }
 
 .post__text-hero{
   padding-block: 25px;
   align-self: flex-start;
   line-height: 1.112;
-  border-inline: var(--border-default);
 
 }
 
@@ -191,8 +187,6 @@ main{
   padding-block-end: 25px;
   padding-inline-start: 169px;
   gap: 2px;
-  border-block-end: var(--border-default);
-  border-inline: var(--border-default);
 }
 
 .card__like-button{
@@ -297,9 +291,8 @@ main{
   }
 
   .post__text{
-    line-height: 21.55px;
+    line-height: 20.6px;
   }
-
 
 
   .footer__save-button{
