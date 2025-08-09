@@ -151,7 +151,7 @@ main {
 .post__text {
   padding-inline: 25px;
   padding-block-start: 25px;
-  line-height: 1.14;
+  line-height: 1.16;
 }
 
 .post__text-hero {
@@ -183,6 +183,9 @@ main {
 .card__icon-button {
   border: 2px solid transparent;
   transition: border-color 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .card__icon-button:focus {
@@ -265,7 +268,7 @@ main {
   }
 
   .post__text {
-    line-height: 20.6px;
+    line-height: 21.14px;
   }
 
   .footer__save-button {
