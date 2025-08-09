@@ -230,7 +230,7 @@ main {
 .save-dialog {
   border: var(--border-default);
   padding-inline: 40px;
-  padding-block-start: 30px;
+  padding-block: 30px;
   color: #000;
   font-family: var(--font-accent);
   background-color: #ffffff;
@@ -282,5 +282,9 @@ main {
   .footer__icon {
     width: 21px;
     height: 21px;
+  }
+
+  .save-dialog{
+    padding-inline: 30px;
   }
 }
