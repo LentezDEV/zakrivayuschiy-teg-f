@@ -10,45 +10,40 @@
 
 */
 
-.card__like-button,
-.footer__save-button,
-.save-dialog__ok {
+
+.button {
   position: relative;
   overflow: hidden;
-  color: var(--btn-fg-color);
   background-color: var(--btn-bg-color);
+  color: var(--btn-fg-color);
   transition: box-shadow 0.3s ease;
 }
 
-.card__like-button:focus,
-.footer__save-button:focus,
-.save-dialog__ok:focus {
+/* фокус */
+.button:focus {
   outline: none;
 }
-
-.card__like-button:focus-visible,
-.footer__save-button:focus-visible,
-.save-dialog__ok:focus-visible {
+.button:focus-visible {
   box-shadow: 2px 2px 0 0 var(--accent-color);
 }
 
-.card__like-button::before,
-.footer__save-button::before,
-.save-dialog__ok::before {
-  content: "";
+/* «набегающее» затемнение */
+.button::before {
+  content: '';
   position: absolute;
   inset: 0;
   background: var(--accent-color);
-  transition: transform 0.5s ease-in-out;
   transform: translateX(-100%);
+  transition: transform 0.5s ease-in-out;
 }
-
-/* при наведении вытягиваем пс-элемент на всю ширину */
-.card__like-button:hover::before,
-.footer__save-button:hover::before,
-.save-dialog__ok:hover::before {
+.button:hover::before {
   transform: translateX(0);
 }
+
+.save-dialog__ok {            
+  inline-size: 100%;
+}
+
 
 .button__text {
   position: relative;
