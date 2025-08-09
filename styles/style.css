@@ -173,11 +173,15 @@ main {
 
 .card__like-button {
   border: var(--border-default);
-  padding-inline: 37px;
+  padding-inline: 31px;
   padding-block: 12px;
   font-family: var(--font-accent);
   font-size: var(--fs-button-lable);
   line-height: 90%;
+  inline-size: 130px;          
+  display: inline-flex;
+  justify-content: center; 
+  align-items: center;
 }
 
 .card__icon-button {
