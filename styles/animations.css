@@ -34,7 +34,6 @@
 
 .card__like-button::before,
 .footer__save-button::before,
-.save_dialog__ok::before,
 .save-dialog__ok::before {
   content: "";
   position: absolute;

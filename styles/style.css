@@ -139,7 +139,8 @@ main {
   filter: brightness(0.8) blur(1.2px);
 }
 
-@supports (-webkit-text-stroke: 1px var(--label-stroke-color)) or (text-stroke: 1px var(--label-stroke-color)) {
+@supports (-webkit-text-stroke: 1px var(--label-stroke-color)) or
+  (text-stroke: 1px var(--label-stroke-color)) {
   .post__image-caption {
     text-shadow: none;
     -webkit-text-stroke: 1px var(--label-stroke-color);
