@@ -59,12 +59,14 @@
 .footer__save-button .footer__icon {
   position: relative;
   z-index: 1;
-  transition: filter 0.1s ease;
+  filter: invert(0);
+  transition: filter 0s ease 0.4s;
 }
 
 /* при наведении кнопки инвертируем цвета дискеты */
 .footer__save-button:hover .footer__icon {
   filter: invert(1);
+  transition: filter 0s ease 0.1s;
 }
 
 .sparks {
