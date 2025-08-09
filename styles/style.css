@@ -157,8 +157,8 @@ main {
 }
 
 .post__text:last-of-type {
-  margin-block-end: 25px;
   align-self: flex-start;
+  margin-block-end: 25px;
   line-height: 18.2px;
 }
 
@@ -202,7 +202,7 @@ main {
   border-color: var(--accent-color);
 }
 
-.footer {
+.save-button_element {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -210,12 +210,11 @@ main {
   width: 100%;
 }
 
-.footer__save-button {
+.save-button {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 8px;
-  margin-block-start: 50px;
   margin-block-end: 100px;
   border: var(--border-default);
   padding-inline: 20px;
@@ -285,16 +284,14 @@ main {
   }
 
   .post__text:last-of-type {
+    line-height: 1.19;
+  }
 
-  line-height: 1.19;
-}
-
-
-  .footer__save-button {
+  .save-button {
     flex-direction: row;
   }
 
-  .footer__icon {
+  .save-button__icon {
     width: 21px;
     height: 21px;
   }
