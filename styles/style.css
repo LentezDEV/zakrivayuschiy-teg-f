@@ -23,17 +23,20 @@
 }
 
 .header {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
   margin-inline: auto;
   margin-block: 100px;
   border: 2px solid black;
   background-color: white;
-  block-size: 327px;
   inline-size: var(--width-main);
+}
+
+.header_element {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 122px 16px;
 }
 
 .header__logo {
@@ -42,9 +45,9 @@
 }
 
 .header__tagline {
-  margin-block-start: 20px;
   font-family: var(--font-accent);
   font-size: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
+  line-height: 10px;
   text-transform: uppercase;
 }
 
@@ -68,7 +71,6 @@ main {
 .post__title,
 .post__text {
   font-size: var(--fs-card);
-  letter-spacing: 0.1px;
 }
 
 .post__title {
@@ -149,15 +151,15 @@ main {
 }
 
 .post__text {
-  padding-inline: 25px;
+  padding-inline: 25.2px;
   padding-block-start: 25px;
-  line-height: 1.16;
+  line-height: 1.18;
 }
 
-.post__text-hero {
+.post__text:last-of-type {
+  margin-block-end: 25px;
   align-self: flex-start;
-  padding-block: 25px;
-  line-height: 1.112;
+  line-height: 18.2px;
 }
 
 .like-button {
@@ -268,12 +270,25 @@ main {
 
 @media (min-width: 1440px) {
   .header {
-    block-size: 368px;
+    margin-block-end: 98px;
   }
 
-  .post__text {
-    line-height: 21.14px;
+  .header_element {
+    padding: 130px 122.5px;
   }
+
+  .header__tagline {
+    line-height: 1;
+  }
+  .post__text {
+    line-height: 21.37px;
+  }
+
+  .post__text:last-of-type {
+
+  line-height: 1.19;
+}
+
 
   .footer__save-button {
     flex-direction: row;
