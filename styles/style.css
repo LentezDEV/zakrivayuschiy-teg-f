@@ -113,31 +113,31 @@ main {
   mix-blend-mode: hard-light;
 }
 
-.img-start {
+.filter-sepia {
   filter: sepia(0.25) contrast(1.1) brightness(1.08);
 }
 
-.img-clean {
+.filter-high-contrast {
   filter: contrast(1.5) brightness(1.15);
 }
 
-.img-dance {
+.filter-vibrant {
   filter: saturate(1.6) hue-rotate(-12deg) contrast(1.2);
 }
 
-.img-disco {
+.filter-disco-neon {
   filter: hue-rotate(335deg) saturate(2) drop-shadow(0 0 7px #ff3cff);
 }
 
-.img-moose {
+.filter-hue-invert {
   filter: hue-rotate(180deg);
 }
 
-.img-win {
+.filter-noir {
   filter: grayscale(0.65) brightness(1.15) drop-shadow(0 0 4px #0003);
 }
 
-.img-copium {
+.filter-blur {
   filter: brightness(0.8) blur(1.2px);
 }
 
@@ -263,6 +263,15 @@ main {
   background-color: transparent;
 }
 
+.save-button__icon {
+  position: relative;
+  z-index: 1;
+  width: 29px;
+  height: 28px;
+  color: var(--btn-fg-color);
+  mix-blend-mode: difference;
+}
+
 .save-dialog::backdrop {
   background-color: rgb(0 0 0 / 0.75);
 }
@@ -279,13 +288,6 @@ main {
   .header__tagline {
     line-height: 1;
   }
-  .post__text {
-    line-height: 21.37px;
-  }
-
-  .post__text:last-of-type {
-    line-height: 1.19;
-  }
 
   .save-button {
     flex-direction: row;
@@ -294,6 +296,10 @@ main {
   .save-button__icon {
     width: 21px;
     height: 21px;
+  }
+
+  .button__text {
+    line-height: 1;
   }
 
   .save-dialog {
